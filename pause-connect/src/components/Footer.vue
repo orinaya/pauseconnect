@@ -7,11 +7,11 @@ import LinkComponent from "@/components/LinkComponent.vue";
         <div id="footer-main-links">
             <ul>
                 <span>Plan du site</span>
-                <li><RouterLink to="">Accueil</RouterLink></li>
-                <li><RouterLink to="">À propos</RouterLink></li>
-                <li><RouterLink to="">Notre quiz</RouterLink></li>
-                <li><RouterLink to="">Nos défis</RouterLink></li>
-                <li><RouterLink to="">Obtenir de l’aide</RouterLink></li>
+                <li class="nav-content_link"><RouterLink to="">Accueil</RouterLink></li>
+                <li class="nav-content_link"><RouterLink to="">À propos</RouterLink></li>
+                <li class="nav-content_link"><RouterLink to="">Notre quiz</RouterLink></li>
+                <li class="nav-content_link"><RouterLink to="">Nos défis</RouterLink></li>
+                <li class="nav-content_link"><RouterLink to="">Obtenir de l’aide</RouterLink></li>
             </ul>
             <ul id="socials">
                 <span>Nous suivre</span>
@@ -48,6 +48,7 @@ import LinkComponent from "@/components/LinkComponent.vue";
 </template>
 <style scoped>
 footer {
+    padding: 20px 0 0 0;
     width: 100%;
     background-color: hsl(206, 66%, 10%);
     color: white;
@@ -65,6 +66,9 @@ footer li {
 footer #footer-main-links {
     display: flex;
     justify-content: space-evenly;
+    @media (max-width: 767px) {
+        flex-direction: column;
+    }
 }
 
 footer #footer-main-links span {
@@ -85,8 +89,24 @@ footer #footer-legal-links {
     color: black;
 }
 
+footer #footer-legal-links a {
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
 #socials > div {
     display: flex;
     gap: 20px;
+}
+
+.nav-content_link {
+    padding: 4px 0;
+
+    &:hover {
+        text-decoration: underline;
+        text-decoration-color: var(--citrus);
+        text-decoration-thickness: 3px;
+    }
 }
 </style>
