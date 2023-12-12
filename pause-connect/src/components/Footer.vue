@@ -7,15 +7,19 @@ import LinkComponent from "@/components/LinkComponent.vue";
         <div id="footer-main-links">
             <ul>
                 <span>Plan du site</span>
-                <li class="nav-content_link"><RouterLink to="/">Accueil</RouterLink></li>
-                <li class="nav-content_link">
+                <li class="nav-content_footer">
+                    <RouterLink to="/">Accueil</RouterLink>
+                </li>
+                <li class="nav-content_footer">
                     <RouterLink to="/informations">À propos</RouterLink>
                 </li>
-                <li class="nav-content_link">
+                <li class="nav-content_footer">
                     <RouterLink to="/notre-quiz">Notre quiz</RouterLink>
                 </li>
-                <li class="nav-content_link"><RouterLink to="/nos-defis">Nos défis</RouterLink></li>
-                <li class="nav-content_link">
+                <li class="nav-content_footer">
+                    <RouterLink to="/nos-defis">Nos défis</RouterLink>
+                </li>
+                <li class="nav-content_footer">
                     <RouterLink to="/aide">Obtenir de l’aide</RouterLink>
                 </li>
             </ul>
@@ -106,7 +110,7 @@ footer #footer-legal-links a {
     gap: 20px;
 }
 
-.nav-content_link {
+.nav-content_footer {
     padding: 4px 0;
 
     &:hover {
