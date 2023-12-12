@@ -1,10 +1,12 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
+import HeaderComponent from "./components/HeaderComponent.vue";
 import Footer from "@/components/Footer.vue";
 import EscapeBlock from "@/components/EscapeBlock.vue";
 </script>
 
 <template>
+    <HeaderComponent />
     <RouterView />
     <EscapeBlock
         title="Comment sortir de l’addiction ?"

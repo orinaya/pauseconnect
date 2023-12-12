@@ -1,2 +1,2 @@
 <script setup></script>
-<template></template>
+<template><h1>Infos</h1></template>

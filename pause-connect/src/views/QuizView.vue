@@ -1,2 +1,4 @@
 <script setup></script>
-<template></template>
+<template>
+  <h1>Quiz</h1>
+</template>

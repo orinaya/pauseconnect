@@ -14,10 +14,12 @@
   --mint: hsl(110, 50%, 90%);
   --citrus: hsl(73, 71%, 70%);
 
+  --citrus-500: hsl(73, 71%, 50%);
+
   --mint-btn-secondary-bg: hsl(110, 50%, 90%);
   --mint-btn-secondary-fg: hsl(110, 50%, 30%);
   --mint-btn-secondary-bg-hover: hsl(110, 50%, 80%);
-  --mint-bnt-secondary-fg-hover: hsl(110, 50%, 20%);
+  --mint-btn-secondary-fg-hover: hsl(110, 50%, 20%);
 
   --citrus-btn-primary-bg: hsl(73, 71%, 70%);
   --citrus-btn-primary-fg: hsl(73, 71%, 20%);
