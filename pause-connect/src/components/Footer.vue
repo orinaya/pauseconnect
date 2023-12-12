@@ -7,11 +7,17 @@ import LinkComponent from "@/components/LinkComponent.vue";
         <div id="footer-main-links">
             <ul>
                 <span>Plan du site</span>
-                <li class="nav-content_link"><RouterLink to="">Accueil</RouterLink></li>
-                <li class="nav-content_link"><RouterLink to="">À propos</RouterLink></li>
-                <li class="nav-content_link"><RouterLink to="">Notre quiz</RouterLink></li>
-                <li class="nav-content_link"><RouterLink to="">Nos défis</RouterLink></li>
-                <li class="nav-content_link"><RouterLink to="">Obtenir de l’aide</RouterLink></li>
+                <li class="nav-content_link"><RouterLink to="/">Accueil</RouterLink></li>
+                <li class="nav-content_link">
+                    <RouterLink to="/informations">À propos</RouterLink>
+                </li>
+                <li class="nav-content_link">
+                    <RouterLink to="/notre-quiz">Notre quiz</RouterLink>
+                </li>
+                <li class="nav-content_link"><RouterLink to="/nos-defis">Nos défis</RouterLink></li>
+                <li class="nav-content_link">
+                    <RouterLink to="/aide">Obtenir de l’aide</RouterLink>
+                </li>
             </ul>
             <ul id="socials">
                 <span>Nous suivre</span>
@@ -48,7 +54,7 @@ import LinkComponent from "@/components/LinkComponent.vue";
 </template>
 <style scoped>
 footer {
-    padding: 20px 0 0 0;
+    padding: 40px 0 0 0;
     width: 100%;
     background-color: hsl(206, 66%, 10%);
     color: white;
