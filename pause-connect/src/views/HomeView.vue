@@ -1,5 +1,9 @@
-<script setup></script>
+<script setup>
+import HeaderComponent from "@/components/HeaderComponent.vue";
+</script>
 
 <template>
-  <main>Coucou prout</main>
+  <main>
+    <HeaderComponent />
+  </main>
 </template>
