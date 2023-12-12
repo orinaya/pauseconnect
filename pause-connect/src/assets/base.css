@@ -5,7 +5,7 @@
   --h1-home: 54px;
   --h1: 48px;
   --h2: 36px;
-  --h3: 20px;
+  --h3: 18px;
   --p-text: 16px;
 }
 /* COLORS */
@@ -15,6 +15,9 @@
   --citrus: hsl(73, 71%, 70%);
 
   --citrus-500: hsl(73, 71%, 50%);
+  --citrus-950: hsl(73, 71%, 95%);
+  --indigo-200: hsl(206, 66%, 20%);
+  --indigo-500: hsl(206, 66%, 50%);
 
   --mint-btn-secondary-bg: hsl(110, 50%, 90%);
   --mint-btn-secondary-fg: hsl(110, 50%, 30%);
@@ -81,7 +84,7 @@ li {
 
 /* TITLE */
 h1 {
-  color: var(--indigo);
+  color: #fff;
   font-family: var(--font-title);
   font-size: var(--h1);
   margin: 0;

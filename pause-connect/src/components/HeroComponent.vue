@@ -48,7 +48,7 @@ import LinkComponent from "./LinkComponent.vue";
   z-index: 1;
 
   &:hover {
-    transform: scale(1.06);
+    transform: scale(1.2);
   }
 }
 

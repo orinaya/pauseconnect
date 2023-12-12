@@ -21,8 +21,13 @@ var menu = [
     color: "white",
   },
   {
-    name: "Obtenir de l'aide",
+    name: "Sortir de l'addiction",
     link: "/aide",
+    color: "white",
+  },
+  {
+    name: "Contact",
+    link: "/contact",
     color: "citrus",
   },
 ];
@@ -31,7 +36,7 @@ var menu = [
 <template>
   <nav>
     <div class="nav-container container">
-      <img src="../assets/img/logo-pause-connect.svg" />
+      <RouterLink to="/"><img src="../assets/img/logo-pause-connect.svg" /></RouterLink>
       <ul class="nav-content">
         <li class="nav-content_link" v-for="(item, index) in menu" :key="index">
           <RouterLink :to="item.link" :class="item.color">{{ item.name }}</RouterLink>
