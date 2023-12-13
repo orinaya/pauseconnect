@@ -1,6 +1,7 @@
 <script setup>
 import BannerComponent from "../components/BannerComponent.vue";
 import Question1 from "@/components/questions/Question1Component.vue";
+import Question2 from "@/components/questions/Question2Component.vue";
 import { ref } from "vue";
 const previousPages = [
     {
@@ -20,7 +21,7 @@ var response = ref(0);
 
 function addIndex(points) {
     questionIndex.value++;
-    response = response + points;
+    response.value = response.value + points;
 }
 </script>
 
@@ -28,6 +29,7 @@ function addIndex(points) {
     <pre>Points: {{ response }} Index:{{ questionIndex }}</pre>
     <section id="quiz-questions">
         <Question1 v-if="questionIndex == 1" v-on:nextQuestion="addIndex" />
+        <Question2 v-if="questionIndex == 2" v-on:nextQuestion="addIndex" />
     </section>
 </template>
 <style>
@@ -55,9 +57,13 @@ function addIndex(points) {
 
 /* .answerRadio {
     display: none;
-}
+} */
 
-.answerRadio:checked ~ label {
+/* .answerRadio:checked ~ label .answerImg {
     border: 6px solid black;
 } */
+
+.active {
+    opacity: 0;
+}
 </style>

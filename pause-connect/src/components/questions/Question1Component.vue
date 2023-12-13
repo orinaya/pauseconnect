@@ -49,9 +49,10 @@ var btnToggle = ref(false);
         />
     </div>
 </template>
-<style>
+<style scoped>
 .question {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 10%;
 }
@@ -62,7 +63,7 @@ var btnToggle = ref(false);
 
 .answerImg {
     background-color: var(--indigo-900);
-    border: 2px var(--indigo-500) solid;
+    border: 3px var(--indigo-500) solid;
     height: 150px;
     display: flex;
     justify-content: center;
@@ -72,14 +73,14 @@ var btnToggle = ref(false);
         border-color: var(--indigo-200);
         cursor: pointer;
     }
+
+    @media (max-width: 767px) {
+        height: 100px;
+    }
 }
 
 .answerImg img {
     height: 100%;
     display: block;
-}
-
-.active {
-    opacity: 0;
 }
 </style>
