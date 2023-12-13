@@ -13,12 +13,15 @@ import LinkComponent from "./LinkComponent.vue";
           Le guide pour vaincre l’addiction aux écrans et aux réseaux sociaux
         </h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tellus tellus,
-          lacinia non tellus at, convallis laoreet felis. Fusce est lorem, scelerisque vel enim
-          eget, pellentesque vestibulum massa. Je veux laisser du maxi gros prout de feur
+          À l'ère de la connectivité constante, découvre notre guide pour vaincre l'<strong
+            >addiction aux écrans et aux réseaux sociaux</strong
+          >. Nous t'expliquerons cette addiction tout en te fournissant de précieux
+          <strong>conseils et astuces</strong> ! Tu pourras également participer à un
+          <strong>quiz</strong> mais aussi te challenger avec nos <strong>défis</strong>. À toi de
+          jouer !
         </p>
         <div class="hero-buttons">
-          <LinkComponent title="Répondre au quiz" color="primary" routeLink="/notre-quiz" />
+          <LinkComponent title="Es-tu addict ?" color="primary" routeLink="/notre-quiz" />
           <LinkComponent title="Relever nos défis" color="secondary" routeLink="/nos-defis" />
         </div>
       </div>
@@ -35,6 +38,7 @@ import LinkComponent from "./LinkComponent.vue";
   background-size: cover;
   height: 700px;
   color: #fff;
+  margin-bottom: var(--space-section);
 }
 
 .hero-container {

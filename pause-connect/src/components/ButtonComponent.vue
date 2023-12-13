@@ -4,13 +4,19 @@ const buttons = defineProps({
   title: String,
   color: String,
   routeLink: String,
+  iconBefore: String,
+  iconAfter: String,
 });
 
 const colorClass = computed(() => `${buttons.color}`);
 </script>
 
 <template>
-  <button class="btn" :class="[colorClass]">{{ buttons.title }}</button>
+  <button class="btn" :class="[colorClass]">
+    <img v-if="iconBefore" class="link-icon-before icomoon" :src="`${iconBefore}`" />
+    {{ buttons.title }}
+    <img v-if="iconAfter" class="link-icon-after icomoon" :src="`${iconAfter}`" />
+  </button>
 </template>
 
 <style>

@@ -92,7 +92,7 @@ nav {
   }
 }
 .citrus {
-  color: hsl(73, 71%, 50%);
+  color: var(--citrus-500);
 }
 
 .white {
