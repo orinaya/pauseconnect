@@ -46,7 +46,7 @@ import ChallengeCardComponent from "@/components/ChallengeCardComponent.vue";
 
 .challenge {
   background-image: url("../assets/img/road-map.png");
-  height: 1655px;
+  height: 1883px;
   background-repeat: no-repeat;
   background-position-x: 57px;
   background-size: contain;
@@ -55,10 +55,16 @@ import ChallengeCardComponent from "@/components/ChallengeCardComponent.vue";
 
 .challenge-goal {
   background-color: #fff;
+  box-shadow: 0px 3px 9.7px rgba(0, 0, 0, 0.17);
   width: fit-content;
   padding: 20px 24px;
   display: flex;
   justify-content: space-between;
+  gap: 28px;
+  border-radius: 4px;
+  position: absolute;
+  top: 2085px;
+  right: 473px;
 }
 
 .challenge-goal_text {

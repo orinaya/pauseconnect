@@ -3,12 +3,12 @@ const items = [
   {
     title: "Dépendance à la cyber-sexualité",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tellus tellus, lacinia non tellus at, convallis laoreet felis.",
-    image: "addictions-1.jpg",
+    image: "addictions-1.png",
   },
   {
     title: "Dépendance Aux jeux d’argent",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tellus tellus, lacinia non tellus at, convallis laoreet felis.",
-    image: "addictions-2.jpg",
+    image: "addictions-2.png",
   },
 ];
 

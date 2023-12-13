@@ -53,7 +53,8 @@ var items = [
     image: "challenge-4.png",
   },
 ];
-const isShow = ref(false);
+
+const isShow = items.map(() => ref(false));
 const getIconUrl = (image) => {
   return new URL(`../assets/icons/${image}`, import.meta.url).href;
 };
@@ -76,15 +77,15 @@ const close = "icon-close.svg";
         <b class="challenge-card_subtitle indigo">Objectif</b>
         <p>{{ item.goal }}</p>
       </div>
-      <div v-show="isShow" class="challenge-card_tips">
+      <div v-show="isShow[index].value" class="challenge-card_tips">
         <b class="challenge-card_subtitle citrus-text"> Astuce</b>
         <p>{{ item.tips }}</p>
       </div>
       <ButtonComponent
-        :title="isShow ? 'Fermer' : `Voir l'astuce`"
-        :color="isShow ? 'secondary' : 'primary'"
-        @click="isShow = !isShow"
-        :iconAfter="getIconUrl(isShow ? close : eye)"
+        :title="isShow[index].value ? 'Fermer' : `Voir l'astuce`"
+        :color="isShow[index].value ? 'secondary' : 'primary'"
+        @click="isShow[index].value = !isShow[index].value"
+        :iconAfter="getIconUrl(isShow[index].value ? close : eye)"
       />
     </div>
     <div class="challenge-image">
@@ -142,37 +143,37 @@ const close = "icon-close.svg";
 }
 
 #one {
-  top: 464px;
-  right: 146px;
+  top: 474px;
+  right: 104px;
 }
 
 #two {
-  top: 687px;
-  left: 111px;
+  top: 711px;
+  left: 138px;
 }
 
 #three {
-  top: 853px;
-  right: 77px;
+  top: 883px;
+  right: 28px;
 }
 
 #four {
-  top: 1071px;
-  left: 86px;
+  top: 1122px;
+  left: 113px;
 }
 
 #five {
-  top: 1258px;
-  right: 127px;
+  top: 1312px;
+  right: 64px;
 }
 
 #six {
-  top: 1448px;
-  left: 153px;
+  top: 1521px;
+  left: 191px;
 }
 
 #seven {
-  top: 1649px;
-  right: 227px;
+  top: 1746px;
+  right: 194px;
 }
 </style>

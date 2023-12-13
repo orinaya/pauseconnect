@@ -1,6 +1,6 @@
 <script setup>
 import BannerComponent from "../components/BannerComponent.vue";
-import image from "../assets/img/challenge-banner.png";
+import image from "../assets/img/contact-img.png";
 import FormComponent from "@/components/FormComponent.vue";
 
 const previousPages = [
@@ -24,5 +24,7 @@ const item = {
     :image="image"
   />
 
-  <FormComponent />
+  <div class="container">
+    <FormComponent />
+  </div>
 </template>
