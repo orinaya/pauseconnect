@@ -1,155 +1,169 @@
 /* TEXT */
 :root {
-  --font-base: "Titillium Web";
-  --font-title: "Teko";
-  --h1-home: 54px;
-  --h1: 48px;
-  --h2: 36px;
-  --h3: 18px;
-  --p-text: 16px;
+    --font-base: "Titillium Web";
+    --font-title: "Teko";
+    --h1-home: 54px;
+    --h1: 48px;
+    --h2: 36px;
+    --h3: 18px;
+    --p-text: 16px;
 }
 /* COLORS */
 :root {
-  --indigo: hsl(206, 66%, 30%);
-  --mint: hsl(110, 50%, 90%);
-  --citrus: hsl(73, 71%, 70%);
+    --indigo: hsl(206, 66%, 30%);
+    --mint: hsl(110, 50%, 90%);
+    --citrus: hsl(73, 71%, 70%);
 
-  --citrus-500: hsl(73, 71%, 50%);
-  --citrus-950: hsl(73, 71%, 95%);
-  --indigo-200: hsl(206, 66%, 20%);
-  --indigo-500: hsl(206, 66%, 50%);
+    --citrus-500: hsl(73, 71%, 50%);
+    --citrus-950: hsl(73, 71%, 95%);
+    --indigo-200: hsl(206, 66%, 20%);
+    --indigo-500: hsl(206, 66%, 50%);
+    --indigo-900: hsl(206, 66%, 90%);
 
-  --mint-btn-secondary-bg: hsl(110, 50%, 90%);
-  --mint-btn-secondary-fg: hsl(110, 50%, 30%);
-  --mint-btn-secondary-bg-hover: hsl(110, 50%, 80%);
-  --mint-btn-secondary-fg-hover: hsl(110, 50%, 20%);
+    --mint-btn-secondary-bg: hsl(110, 50%, 90%);
+    --mint-btn-secondary-fg: hsl(110, 50%, 30%);
+    --mint-btn-secondary-bg-hover: hsl(110, 50%, 80%);
+    --mint-btn-secondary-fg-hover: hsl(110, 50%, 20%);
 
-  --citrus-btn-primary-bg: hsl(73, 71%, 70%);
-  --citrus-btn-primary-fg: hsl(73, 71%, 20%);
-  --citrus-btn-primary-bg-hover: hsl(73, 71%, 50%);
-  --citrus-btn-primary-fg-hover: hsl(73, 71%, 10%);
+    --citrus-btn-primary-bg: hsl(73, 71%, 70%);
+    --citrus-btn-primary-fg: hsl(73, 71%, 20%);
+    --citrus-btn-primary-bg-hover: hsl(73, 71%, 50%);
+    --citrus-btn-primary-fg-hover: hsl(73, 71%, 10%);
 }
 /* SPACING */
 :root {
-  --space-xs: 8px;
-  --space-s: 16px;
-  --space-m: 24px;
-  --space-l: 32px;
-  --space-xl: 40px;
-  --space-xxl: 48px;
-  --space-xxxl: 56px;
-  --space-section: 96px;
+    --space-xs: 8px;
+    --space-s: 16px;
+    --space-m: 24px;
+    --space-l: 32px;
+    --space-xl: 40px;
+    --space-xxl: 48px;
+    --space-xxxl: 56px;
+    --space-section: 96px;
+}
+
+/* WEIGHT */
+:root {
+    --fw-900: 900;
+    --fw-800: 800;
+    --fw-700: 700;
+    --fw-600: 600;
+    --fw-500: 500;
+    --fw-400: 400;
+    --fw-300: 300;
+    --fw-200: 200;
+    --fw-100: 100;
 }
 
 /* WIDTH */
 :root {
-  --xs: 400px;
-  --ms: 576px;
-  --s: 760px;
-  --m: 980px;
-  --l: 1200px;
-  --xl: 1440px;
+    --xs: 400px;
+    --ms: 576px;
+    --s: 760px;
+    --m: 980px;
+    --l: 1200px;
+    --xl: 1440px;
 }
 
 a {
-  text-decoration: none;
-  color: #000;
+    text-decoration: none;
+    color: #000;
 }
 
 p,
 ul,
 li {
-  margin: 0;
-  list-style-type: none;
+    margin: 0;
+    list-style-type: none;
 }
 
 /* ALIGNEMENT */
 .align-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .column {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
-  max-width: 1280px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+    max-width: 1280px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* TITLE */
 h1 {
-  color: #fff;
-  font-family: var(--font-title);
-  font-size: var(--h1);
-  margin: 0;
+    color: #fff;
+    font-family: var(--font-title);
+    font-size: var(--h1);
+    margin: 0;
 }
 
 .h1-title {
-  color: #fff;
-  font-family: var(--font-title);
-  font-size: var(--h1-home);
-  margin: 0;
+    color: #fff;
+    font-family: var(--font-title);
+    font-size: var(--h1-home);
+    margin: 0;
 }
 
 h2 {
-  color: var(--indigo);
-  font-family: var(--font-title);
-  font-size: var(--h2);
-  margin: 0;
+    color: var(--indigo);
+    font-family: var(--font-title);
+    font-size: var(--h2);
+    margin: 0;
 }
 
 h3 {
-  color: #000;
-  font-family: var(--font-base);
-  font-size: var(--h3);
-  text-transform: uppercase;
-  margin: 0;
+    color: #000;
+    font-family: var(--font-base);
+    font-size: var(--h3);
+    text-transform: uppercase;
+    margin: 0;
 }
 
 h4 {
-  color: #000;
-  font-family: var(--font-base);
-  font-size: var(--h4);
-  margin: 0;
+    color: #000;
+    font-family: var(--font-base);
+    font-size: var(--h4);
+    margin: 0;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-  }
+    :root {
+    }
 }
 
 body {
-  font-family: var(--font-base);
-  font-size: var(--p-text);
-  background-color: #fff;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
+    font-family: var(--font-base);
+    font-size: var(--p-text);
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .primary {
-  color: var(--citrus-btn-primary-fg);
-  background-color: var(--citrus-btn-primary-bg);
+    color: var(--citrus-btn-primary-fg);
+    background-color: var(--citrus-btn-primary-bg);
 
-  &:hover {
-    color: var(--citrus-btn-primary-fg-hover);
-    background-color: var(--citrus-btn-primary-bg-hover);
-  }
+    &:hover {
+        color: var(--citrus-btn-primary-fg-hover);
+        background-color: var(--citrus-btn-primary-bg-hover);
+    }
 }
 
 .secondary {
-  color: var(--mint-btn-secondary-fg);
-  background-color: var(--mint-btn-secondary-bg);
+    color: var(--mint-btn-secondary-fg);
+    background-color: var(--mint-btn-secondary-bg);
 
-  &:hover {
-    color: var(--mint-btn-secondary-fg-hover);
-    background-color: var(--mint-btn-secondary-bg-hover);
-  }
+    &:hover {
+        color: var(--mint-btn-secondary-fg-hover);
+        background-color: var(--mint-btn-secondary-bg-hover);
+    }
 }
