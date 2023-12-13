@@ -2,6 +2,7 @@
 import BannerComponent from "../components/BannerComponent.vue";
 import Question1 from "@/components/questions/Question1Component.vue";
 import Question2 from "@/components/questions/Question2Component.vue";
+import Question3 from "@/components/questions/Question3Component.vue";
 import { ref } from "vue";
 const previousPages = [
     {
@@ -30,6 +31,7 @@ function addIndex(points) {
     <section id="quiz-questions">
         <Question1 v-if="questionIndex == 1" v-on:nextQuestion="addIndex" />
         <Question2 v-if="questionIndex == 2" v-on:nextQuestion="addIndex" />
+        <Question3 v-if="questionIndex == 3" v-on:nextQuestion="addIndex" />
     </section>
 </template>
 <style>
@@ -55,13 +57,24 @@ function addIndex(points) {
     align-self: end;
 }
 
-/* .answerRadio {
+.answerRadio {
     display: none;
-} */
+}
 
-/* .answerRadio:checked ~ label .answerImg {
-    border: 6px solid black;
-} */
+.answerRadio:checked ~ label .answerImg {
+    border-color: var(--indigo-200);
+
+    animation: bloup 250ms ease-in-out forwards;
+}
+
+@keyframes bloup {
+    75% {
+        transform: scale(1.15);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
 
 .active {
     opacity: 0;

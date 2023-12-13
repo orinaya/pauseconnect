@@ -23,7 +23,7 @@ const points = computed(() => {
                 <label for="rangeDevices">{{ answer }}</label>
                 <input id="rangeDevices" type="range" min="1" max="5" step="1" v-model="answer" />
                 <div class="range"><span>1</span><span>5 et +</span></div>
-                <p>Slide pour changer la valeur</p>
+                <p><i>*utilise le curseur pour changer la valeur</i></p>
             </div>
         </div>
         <ButtonComponent
@@ -45,6 +45,7 @@ const points = computed(() => {
 
 label {
     text-align: center;
+    font-weight: var(--fw-600);
 }
 .slider {
     margin: 0 auto;
@@ -98,5 +99,17 @@ label {
     max-width: 75px;
     left: calc(17%);
     top: 27vh;
+}
+
+#rangeDevices::-moz-range-track {
+    background: black;
+}
+
+#rangeDevices::-moz-range-thumb {
+    background: var(--indigo-600);
+    border: 2px solid black;
+    width: 40px;
+    height: 20px;
+    border-radius: 30px;
 }
 </style>

@@ -6,38 +6,27 @@ var btnToggle = ref(false);
 </script>
 <template>
     <div class="question-container">
-        <h2>Combien d’heures passez vous chaque jour sur votre téléphone ?</h2>
+        <h2>Utilisation juste avant de dormir et/ou utilisation juste après le réveil</h2>
         <div class="question">
-            <div @click="(answer = 1), (btnToggle = true)">
-                <input id="a1" type="radio" name="answersRadio" class="answerRadio" />
-
-                <label for="a1">
-                    <div class="answerImg"><img src="../../assets/img/q1_img1.svg" /></div>
-                    <p>0 - 2 heures</p>
+            <div @click="(answer = 4), (btnToggle = true)">
+                <input id="a2" type="radio" name="answersRadio" class="answerRadio" />
+                <label for="a2">
+                    <div class="answerImg"><img src="../../assets/img/sunrise.png" /></div>
+                    <p>Au réveil</p>
                 </label>
             </div>
             <div @click="(answer = 4), (btnToggle = true)">
-                <input id="a2" type="radio" name="answersRadio" class="answerRadio" />
-
-                <label for="a2">
-                    <div class="answerImg"><img src="../../assets/img/q1_img2.svg" /></div>
-                    <p>2 - 4 heures</p>
-                </label>
-            </div>
-            <div @click="(answer = 7), (btnToggle = true)">
                 <input id="a3" type="radio" name="answersRadio" class="answerRadio" />
-
                 <label for="a3">
-                    <div class="answerImg"><img src="../../assets/img/q1_img3.svg" /></div>
-                    <p>4 - 7 heures</p>
+                    <div class="answerImg"><img src="../../assets/img/night.png" /></div>
+                    <p>Au couché</p>
                 </label>
             </div>
             <div @click="(answer = 10), (btnToggle = true)">
                 <input id="a4" type="radio" name="answersRadio" class="answerRadio" />
-
                 <label for="a4">
-                    <div class="answerImg"><img src="../../assets/img/q1_img4.svg" /></div>
-                    <p>plus de 7 heures</p>
+                    <div class="answerImg"><img src="../../assets/img/bothSun.png" /></div>
+                    <p>Les deux</p>
                 </label>
             </div>
         </div>
