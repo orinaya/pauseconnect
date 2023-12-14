@@ -6,34 +6,39 @@ var btnToggle = ref(false);
 </script>
 <template>
     <div class="question-container">
-        <h2>Utilisation juste avant de dormir et/ou utilisation juste après le réveil</h2>
+        <h2>Que manges-tu pendant tes activités numériques ?</h2>
         <div class="question">
-            <div @click="(answer = 1), (btnToggle = true)">
+            <div @click="(answer = 5), (btnToggle = true)">
                 <input id="a1" type="radio" name="answersRadio" class="answerRadio" />
+
                 <label for="a1">
-                    <div class="answerImg"><img src="../../assets/icons/redX.svg" /></div>
-                    <p>Au réveil</p>
+                    <div class="answerImg"><img src="../../assets/img/sweets.svg" /></div>
+                    <div>
+                        <h3>Bonbons, chocolat, gâteaux...</h3>
+                        <p>Tout aliment particulièrement sucré</p>
+                    </div>
                 </label>
             </div>
-            <div @click="(answer = 4), (btnToggle = true)">
+            <div @click="(answer = 5), (btnToggle = true)">
                 <input id="a2" type="radio" name="answersRadio" class="answerRadio" />
+
                 <label for="a2">
-                    <div class="answerImg"><img src="../../assets/img/sunrise.png" /></div>
-                    <p>Au réveil</p>
+                    <div class="answerImg"><img src="../../assets/img/sandwich.svg" /></div>
+                    <div>
+                        <h3>Chips, sandwich...</h3>
+                        <p>Aliments salés ou de snacking</p>
+                    </div>
                 </label>
             </div>
-            <div @click="(answer = 4), (btnToggle = true)">
+            <div @click="(answer = 0), (btnToggle = true)">
                 <input id="a3" type="radio" name="answersRadio" class="answerRadio" />
+
                 <label for="a3">
-                    <div class="answerImg"><img src="../../assets/img/night.png" /></div>
-                    <p>Au couché</p>
-                </label>
-            </div>
-            <div @click="(answer = 10), (btnToggle = true)">
-                <input id="a4" type="radio" name="answersRadio" class="answerRadio" />
-                <label for="a4">
-                    <div class="answerImg"><img src="../../assets/img/bothSun.png" /></div>
-                    <p>Les deux</p>
+                    <div class="answerImg"><img src="../../assets/icons/redX.svg" /></div>
+                    <div>
+                        <h3>Rien je n’ai pas faim.</h3>
+                        <p>Tout aliment composé de vide</p>
+                    </div>
                 </label>
             </div>
         </div>
@@ -47,46 +52,49 @@ var btnToggle = ref(false);
     </div>
 </template>
 <style scoped>
-.question {
+label {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 10%;
+    gap: 20px;
+}
+.question {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 10%;
 }
 
-.question > div {
+/* .question > div {
     text-align: center;
-}
-
-.question > div:first-child .answerImg {
-    padding: 20px;
-}
+} */
 
 .answerImg {
     background-color: var(--indigo-900);
     border: 3px var(--indigo-500) solid;
-    height: 150px;
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+
     display: flex;
     justify-content: center;
     border-radius: 2px;
-    aspect-ratio: 1;
-    box-sizing: border-box;
     &:hover {
         border-color: var(--indigo-200);
         cursor: pointer;
     }
 
     @media (max-width: 767px) {
-        height: 100px;
+        height: 50px;
+        width: 50px;
     }
 }
 
 .answerImg img {
-    height: 100%;
+    height: auto;
+    width: 100%;
     display: block;
 }
 
-label > p {
+label p {
     margin-top: 20px;
 }
 </style>

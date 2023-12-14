@@ -3,6 +3,11 @@ import BannerComponent from "../components/BannerComponent.vue";
 import Question1 from "@/components/questions/Question1Component.vue";
 import Question2 from "@/components/questions/Question2Component.vue";
 import Question3 from "@/components/questions/Question3Component.vue";
+import Question4 from "@/components/questions/Question4Component.vue";
+import Question5 from "@/components/questions/Question5Component.vue";
+import Question6 from "@/components/questions/Question6Component.vue";
+import Question7 from "@/components/questions/Question7Component.vue";
+import Question8 from "@/components/questions/Question8Component.vue";
 import { ref } from "vue";
 const previousPages = [
     {
@@ -32,9 +37,20 @@ function addIndex(points) {
         <Question1 v-if="questionIndex == 1" v-on:nextQuestion="addIndex" />
         <Question2 v-if="questionIndex == 2" v-on:nextQuestion="addIndex" />
         <Question3 v-if="questionIndex == 3" v-on:nextQuestion="addIndex" />
+        <Question7 v-if="questionIndex == 4" v-on:nextQuestion="addIndex" />
+        <Question4 v-if="questionIndex == 5" v-on:nextQuestion="addIndex" />
+        <Question5 v-if="questionIndex == 6" v-on:nextQuestion="addIndex" />
+        <Question6 v-if="questionIndex == 7" v-on:nextQuestion="addIndex" />
+        <Question8 v-if="questionIndex == 8" v-on:nextQuestion="addIndex" />
     </section>
 </template>
 <style>
+@media (min-width: 1000px) {
+    h2 {
+        font-size: 26px;
+    }
+}
+
 #quiz-questions {
     height: 65vh;
     min-height: fit-content;
