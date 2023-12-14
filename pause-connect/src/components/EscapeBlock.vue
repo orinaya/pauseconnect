@@ -18,7 +18,7 @@ defineProps({
 <template>
   <div id="addiction-block" class="container">
     <div id="block-content">
-      <img :src="img" :alt="title" />
+      <img src="../assets/img/infos-banner.png" :alt="title" />
 
       <div>
         <div>
