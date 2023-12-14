@@ -8,7 +8,10 @@ import Question5 from "@/components/questions/Question5Component.vue";
 import Question6 from "@/components/questions/Question6Component.vue";
 import Question7 from "@/components/questions/Question7Component.vue";
 import Question8 from "@/components/questions/Question8Component.vue";
-import { ref } from "vue";
+import Question9 from "@/components/questions/Question9Component.vue";
+import Question10 from "@/components/questions/Question10Component.vue";
+import Results from "@/components/QuizResultComponent.vue";
+import { computed, ref } from "vue";
 const previousPages = [
     {
         path: "/",
@@ -24,15 +27,25 @@ import image from "../assets/img/challenge-banner.png";
 
 var questionIndex = ref(1);
 var response = ref(0);
+var resultTab = ref({ color: "yes", text: null });
 
 function addIndex(points) {
     questionIndex.value++;
     response.value = response.value + points;
 }
+
+function calcResult() {
+    if (response <= 30) {
+        resultTab.value.color = "green";
+    } else if (response > 30 && response < 70) {
+        resultTab.value.color = "yellow";
+    } else if (response > 70) {
+        resultTab.value.color = "red";
+    }
+}
 </script>
 
 <template>
-    <pre>Points: {{ response }} Index:{{ questionIndex }}</pre>
     <section id="quiz-questions">
         <Question1 v-if="questionIndex == 1" v-on:nextQuestion="addIndex" />
         <Question2 v-if="questionIndex == 2" v-on:nextQuestion="addIndex" />
@@ -42,11 +55,19 @@ function addIndex(points) {
         <Question5 v-if="questionIndex == 6" v-on:nextQuestion="addIndex" />
         <Question6 v-if="questionIndex == 7" v-on:nextQuestion="addIndex" />
         <Question8 v-if="questionIndex == 8" v-on:nextQuestion="addIndex" />
+        <Question9 v-if="questionIndex == 9" v-on:nextQuestion="addIndex" />
+        <Question10 v-if="questionIndex == 10" v-on:nextQuestion="addIndex" />
+        <Results
+            v-if="questionIndex == 11"
+            :points="response"
+            :color="resultTab.color"
+            :text="resultTab.text"
+        />
     </section>
 </template>
 <style>
 @media (min-width: 1000px) {
-    h2 {
+    #quiz-questions h2 {
         font-size: 26px;
     }
 }

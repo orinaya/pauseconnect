@@ -6,34 +6,38 @@ var btnToggle = ref(false);
 </script>
 <template>
     <div class="question-container">
-        <h2>Utilises-tu ton téléphone avant de dormir et/ou juste après le réveil</h2>
+        <h2>Tu préfères ...</h2>
         <div class="question">
             <div @click="(answer = 1), (btnToggle = true)">
                 <input id="a1" type="radio" name="answersRadio" class="answerRadio" />
+
                 <label for="a1">
-                    <div class="answerImg"><img src="../../assets/icons/redX.svg" /></div>
-                    <p>Aucun des deux</p>
+                    <div class="answerImg"><img src="../../assets/img/friends.webp" /></div>
+                    <p>Sortir avec des amis</p>
                 </label>
             </div>
             <div @click="(answer = 4), (btnToggle = true)">
                 <input id="a2" type="radio" name="answersRadio" class="answerRadio" />
+
                 <label for="a2">
-                    <div class="answerImg"><img src="../../assets/img/sunrise.png" /></div>
-                    <p>Au réveil</p>
+                    <div class="answerImg"><img src="../../assets/img/tv.webp" /></div>
+                    <p>Regarder un film seul chez toi</p>
                 </label>
             </div>
-            <div @click="(answer = 4), (btnToggle = true)">
+            <div @click="(answer = 7), (btnToggle = true)">
                 <input id="a3" type="radio" name="answersRadio" class="answerRadio" />
+
                 <label for="a3">
-                    <div class="answerImg"><img src="../../assets/img/night.png" /></div>
-                    <p>Au couché</p>
+                    <div class="answerImg"><img src="../../assets/img/videogames.webp" /></div>
+                    <p>Jouer aux jeux vidéos</p>
                 </label>
             </div>
             <div @click="(answer = 10), (btnToggle = true)">
                 <input id="a4" type="radio" name="answersRadio" class="answerRadio" />
+
                 <label for="a4">
-                    <div class="answerImg"><img src="../../assets/img/bothSun.png" /></div>
-                    <p>Les deux</p>
+                    <div class="answerImg"><img src="../../assets/img/socialMedia.webp" /></div>
+                    <p>Trainer sur les réseaux sociaux</p>
                 </label>
             </div>
         </div>
@@ -58,10 +62,6 @@ var btnToggle = ref(false);
     text-align: center;
 }
 
-.question > div:first-child .answerImg {
-    padding: 20px;
-}
-
 .answerImg {
     background-color: var(--indigo-900);
     border: 3px var(--indigo-500) solid;
@@ -70,7 +70,7 @@ var btnToggle = ref(false);
     justify-content: center;
     border-radius: 2px;
     aspect-ratio: 1;
-    box-sizing: border-box;
+
     &:hover {
         border-color: var(--indigo-200);
         cursor: pointer;
@@ -84,6 +84,12 @@ var btnToggle = ref(false);
 .answerImg img {
     height: 100%;
     display: block;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 label > p {
