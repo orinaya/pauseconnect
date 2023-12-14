@@ -11,7 +11,7 @@ import EscapeBlock from "@/components/EscapeBlock.vue";
   <EscapeBlock
     title="Comment sortir de l’addiction ?"
     text="Tu penses être addict et tu veux t’améliorer ? Découvre tous nos conseils et préconisations afin de retrouver un équilibre dans ta vie et décrocher des écrans et réseaux sociaux. "
-    img="src/assets/img/addiction-img.png"
+    img="../assets/img/infos-banner.png"
   />
   <Footer />
 </template>
