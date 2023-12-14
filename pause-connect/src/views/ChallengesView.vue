@@ -8,7 +8,7 @@ const previousPages = [
 ];
 const item = {
   title: "Prêt à relever nos défis ?",
-  text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tellus tellus, lacinia non tellus at, convallis laoreet felis. Fusce est lorem, scelerisque vel enimeget, pellentesque vestibulum massa.",
+  text: "Ici, tu trouveras défis en tout genre pour t'aider à t'améliorer et à construire une vraie routine sans écrans et sans réseaux sociaux. L'idée est que tu arrives à maintenir ces efforts même après le dernier défi. ",
 };
 
 import image from "../assets/img/challenge-banner.png";

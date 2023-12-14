@@ -17,7 +17,7 @@ const mapSection = defineProps({
 });
 </script>
 <template>
-  <section>
+  <section class="container">
     <h2>{{ title }}</h2>
     <p>{{ text }}</p>
     <div id="map-content">
@@ -32,13 +32,10 @@ const mapSection = defineProps({
 </template>
 <style scoped>
 section {
-  max-width: 1280px;
-  margin: auto;
   margin-bottom: var(--space-section);
 }
 
 section #map-content {
-  background-color: var(--citrus-900);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -69,6 +66,10 @@ section #map-content img {
   max-width: 970px;
   display: block;
   margin-top: 3rem;
+
+  @media (max-width: 980px) {
+    margin-top: 0;
+  }
 
   &:first-child {
     display: block;

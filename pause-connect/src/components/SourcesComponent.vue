@@ -3,6 +3,7 @@ const sources = [
   "https://gaeconseil.fr/addictions-2/tout-savoir-sur-laddiction-aux-ecrans/",
   "https://www.drogues.gouv.fr/lessentiel-sur-les-usages-problematiques-decrans",
   "https://www.ramsayservices.fr/pathologies/addiction-aux-ecrans-un-trouble-psychologique-prendre-au-serieux",
+  "https://www.axaprevention.fr/sante-bien-etre/addiction-ecrans-chiffres-2019",
 ];
 </script>
 <template>

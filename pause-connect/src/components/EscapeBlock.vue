@@ -16,7 +16,7 @@ defineProps({
 });
 </script>
 <template>
-  <div id="addiction-block">
+  <div id="addiction-block" class="container">
     <div id="block-content">
       <img :src="img" :alt="title" />
 
@@ -40,6 +40,11 @@ defineProps({
     hsl(206, 66%, 10%) 50%,
     hsl(206, 66%, 10%) 100%
   );
+
+  @media (max-width: 980px) {
+    margin-bottom: var(--space-section);
+    background: none;
+  }
 }
 #addiction-block #block-content {
   max-width: 1280px;
@@ -55,9 +60,14 @@ defineProps({
     padding: 50px 60px;
   }
 
-  @media (max-width: 900px) {
-    flex-direction: column;
+  @media (max-width: 980px) {
     align-items: center;
+  }
+
+  @media (max-width: 760px) {
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
   }
 }
 #addiction-block #block-content p {

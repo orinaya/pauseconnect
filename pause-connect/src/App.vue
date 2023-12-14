@@ -16,4 +16,14 @@ import EscapeBlock from "@/components/EscapeBlock.vue";
   <Footer />
 </template>
 
-<style scoped></style>
+<style>
+img,
+.grow {
+  transition: transform 1s;
+}
+
+img:hover,
+.grow:hover {
+  transform: scale(1.1);
+}
+</style>

@@ -67,7 +67,7 @@ const eye = "icon-eye.svg";
 const close = "icon-close.svg";
 </script>
 <template>
-  <div v-for="(item, index) in items" :key="index" class="challenge-card" :id="item.id">
+  <div v-for="(item, index) in items" :key="index" class="challenge-card grow" :id="item.id">
     <div class="challenge-content">
       <div>
         <h3 class="challenge-card_title">Défi n°{{ index + 1 }}</h3>
@@ -93,7 +93,7 @@ const close = "icon-close.svg";
     </div>
   </div>
 </template>
-<style>
+<style scoped>
 .challenge-card:nth-child(odd) {
   background-color: #fff;
   box-shadow: 0px 3px 9.7px rgba(0, 0, 0, 0.17);
@@ -103,6 +103,7 @@ const close = "icon-close.svg";
   padding: 20px 0;
   border-radius: 4px;
   position: absolute;
+  height: fit-content;
 }
 
 .challenge-card:nth-child(even) {

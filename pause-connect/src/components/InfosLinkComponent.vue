@@ -1,19 +1,25 @@
 <script setup>
 import LinkComponent from "./LinkComponent.vue";
+
+defineProps({
+  title: String,
+  text: String,
+});
 </script>
 <template>
   <div class="quiz-link container">
     <div class="container quiz-link_container">
       <div class="quiz-link_content">
         <div class="qc-text">
-          <h2>Penses-tu être addict ?</h2>
+          <h2>{{ title }}</h2>
           <p>
-            Teste ta relation avec les écrans et les réseaux sociaux en faisant notre quiz. C'est le
-            moment de prendre conscience et de trouver le bon équilibre. Es-tu prêt pour le
-            challenge ? Fais le test maintenant !
+            {{ text }}
           </p>
         </div>
-        <LinkComponent title="Répondre au quiz" color="primary" routeLink="/notre-quiz" />
+        <div class="infos-link_buttons">
+          <LinkComponent title="Répondre au quiz" color="primary" routeLink="/notre-quiz" />
+          <LinkComponent title="Réaliser nos défis" color="secondary" routeLink="/nos-defis" />
+        </div>
       </div>
       <img class="quiz-link_image" src="../assets/img/quiz-link.svg" />
     </div>
@@ -21,6 +27,10 @@ import LinkComponent from "./LinkComponent.vue";
 </template>
 
 <style scoped>
+.infos-link_buttons {
+  display: flex;
+  gap: 40px;
+}
 .quiz-link {
   color: white;
   margin-bottom: var(--space-section);

@@ -7,18 +7,18 @@ defineProps({
 });
 </script>
 <template>
-  <section id="numbers-section">
+  <section id="numbers-section" class="container">
     <h2>Quelques chiffres pour commencer</h2>
     <div id="numbers-container">
-      <div>
-        <img src="../assets/img/sign-2.png" alt="" />
+      <div class>
+        <img class="numbers-image" src="../assets/img/sign-2.png" alt="" />
         <div>
           <span>86%</span>
           <p>des adolescents vont sur leur téléphones au réveil</p>
         </div>
       </div>
       <div>
-        <img src="../assets/img/sign-1.png" alt="" />
+        <img class="numbers-image" src="../assets/img/sign-1.png" alt="" />
         <div>
           <span>83%</span>
 
@@ -26,14 +26,14 @@ defineProps({
         </div>
       </div>
       <div>
-        <img src="../assets/img/chips.png" alt="" />
+        <img class="numbers-image" src="../assets/img/chips.png" alt="" />
         <div>
           <span>24%</span>
           <p>consomment plus de snacks et confiseries pendant leurs activités numériques</p>
         </div>
       </div>
       <div>
-        <img src="../assets/img/sign-5.png" alt="" />
+        <img class="numbers-image" src="../assets/img/sign-5.png" alt="" />
         <div>
           <span>56%</span>
 
@@ -53,8 +53,6 @@ defineProps({
 </template>
 <style scoped>
 #numbers-section {
-  max-width: 1280px;
-  margin: auto;
   margin-bottom: var(--space-section);
 }
 
@@ -88,6 +86,10 @@ h2 {
   display: flex;
   @media (max-width: 1000px) {
     position: static;
+  }
+
+  @media (max-width: 760px) {
+    flex-direction: column;
   }
 }
 
@@ -167,7 +169,7 @@ h2 {
     position: static;
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 10px 40px;
     gap: 10px;
     background-color: var(--citrus-950);
     margin-bottom: 20px;
@@ -179,6 +181,7 @@ h2 {
 
   #numbers-container > div img {
     max-height: 100px;
+    width: max-content;
   }
 
   #numbers-container > div:last-child > div,

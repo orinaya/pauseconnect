@@ -5,6 +5,7 @@ import LinkComponent from "@/components/LinkComponent.vue";
 <template>
   <footer>
     <div id="footer-main-links">
+      <img src="../assets/img/logo-pause-connect.svg" />
       <ul>
         <span>Plan du site</span>
         <li class="nav-content_footer">

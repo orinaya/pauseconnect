@@ -33,6 +33,7 @@ const colorClass = computed(() => `${buttons.color}`);
   cursor: pointer;
   transition: transform 1s;
   width: fit-content;
+  z-index: 1;
 
   &:hover {
     transform: scale(1.06);
@@ -57,5 +58,19 @@ const colorClass = computed(() => `${buttons.color}`);
     color: var(--mint-btn-secondary-fg-hover);
     background-color: var(--mint-btn-secondary-bg-hover);
   }
+}
+
+.primary-indigo {
+  color: var(--indigo-btn-primary-fg);
+  background-color: var(--indigo-btn-primary-bg);
+
+  &:hover {
+    color: var(--indigo-btn-primary-fg-hover);
+    background-color: var(--indigo-btn-primary-bg-hover);
+  }
+}
+
+.transparent {
+  background-color: transparent;
 }
 </style>

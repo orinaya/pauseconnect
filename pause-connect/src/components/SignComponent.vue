@@ -40,7 +40,7 @@ const getImageUrl = (image) => {
   <div class="container">
     <h2>Quels sont les signes ?</h2>
     <div class="sign-content">
-      <div class="signcard" v-for="(item, index) in items" :key="index">
+      <div class="signcard grow" v-for="(item, index) in items" :key="index">
         <h3 class="signcard-title">{{ item.title }}</h3>
         <p class="signcard-text">{{ item.text }}</p>
         <img class="signcard-image" :src="getImageUrl(item.image)" />
@@ -58,6 +58,10 @@ const getImageUrl = (image) => {
   margin: 0 auto;
   margin-top: var(--space-l);
   margin-bottom: var(--space-section);
+
+  @media (max-width: 980px) {
+    width: 100%;
+  }
 }
 
 .signcard {

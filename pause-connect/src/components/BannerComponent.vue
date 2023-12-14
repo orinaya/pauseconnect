@@ -22,10 +22,10 @@ defineProps({
       />
       <div class="hero-secondary-content">
         <div>
-          <img :src="image" />
+          <img :src="image" class="hs-image" />
         </div>
         <div class="hs-bloc">
-          <h1>{{ title }}</h1>
+          <h1 class="hs-title">{{ title }}</h1>
           <p class="hsb-text">
             {{ text }}
           </p>
@@ -36,6 +36,18 @@ defineProps({
 </template>
 
 <style>
+.hs-image {
+  @media (min-width: 760px) and (max-width: 980px) {
+    width: 200px;
+  }
+
+  @media (max-width: 760px) {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
 .hero-secondary {
   background-color: var(--indigo-200);
   color: #fff;
@@ -48,13 +60,38 @@ defineProps({
   justify-content: space-around;
   align-items: center;
   padding: var(--space-l) 0;
+
+  @media (max-width: 760px) {
+    flex-direction: column;
+  }
+
+  @media (min-width: 760px) and (max-width: 980px) {
+    gap: 40px;
+  }
 }
 
 .hs-bloc {
   text-align: center;
   width: 50%;
+
+  @media (max-width: 760px) {
+    width: 100%;
+  }
+
+  @media (min-width: 760px) and (max-width: 980px) {
+    width: 80%;
+  }
 }
 
+.hs-title {
+  @media (max-width: 760px) {
+    font-size: var(--h2);
+  }
+
+  @media (min-width: 760px) and (max-width: 980px) {
+    font-size: var(--h2);
+  }
+}
 .hsb-text {
   text-align: center;
 }

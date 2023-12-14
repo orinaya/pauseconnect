@@ -26,7 +26,7 @@ const getImageUrl = (image) => {
   <div class="container">
     <h2>Qui est concerné ?</h2>
     <div class="people-content">
-      <div v-for="(item, index) in items" :key="index" class="people-card">
+      <div v-for="(item, index) in items" :key="index" class="people-card grow">
         <div>
           <h3>{{ item.title }}</h3>
           <p>{{ item.text }}</p>
@@ -43,6 +43,15 @@ const getImageUrl = (image) => {
   justify-content: space-around;
   margin-top: var(--space-xxl);
   margin-bottom: var(--space-section);
+
+  @media (max-width: 980px) {
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 760px) {
+    flex-direction: column;
+    gap: 40px;
+  }
 }
 .people-card {
   background-image: url(../assets/img/citrus-ellipse.png);
@@ -56,5 +65,13 @@ const getImageUrl = (image) => {
   background-position-y: bottom;
   background-position-x: center;
   text-align: center;
+
+  @media (max-width: 980px) {
+    width: 40%;
+  }
+
+  @media (max-width: 760px) {
+    width: 100%;
+  }
 }
 </style>

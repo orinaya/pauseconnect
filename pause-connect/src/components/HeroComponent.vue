@@ -36,9 +36,19 @@ import LinkComponent from "./LinkComponent.vue";
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 700px;
+  height: 615px;
   color: #fff;
   margin-bottom: var(--space-section);
+
+  @media (max-width: 980px) {
+    padding-top: var(--space-xl);
+    height: 500px;
+  }
+
+  @media (max-width: 760px) {
+    padding-top: var(--space-xl);
+    height: 860px;
+  }
 }
 
 .hero-container {
@@ -46,13 +56,22 @@ import LinkComponent from "./LinkComponent.vue";
   justify-content: space-between;
   align-items: center;
   gap: var(--space-xxxl);
+  padding-top: var(--space-xl);
+
+  @media (max-width: 760px) {
+    gap: var(--space-s);
+    flex-direction: column;
+  }
 }
 .hero-image_mask {
   transition: transform 1s;
   z-index: 1;
-
+  width: 427px;
   &:hover {
     transform: scale(1.2);
+  }
+  @media (max-width: 980px) {
+    width: 288px;
   }
 }
 
@@ -63,8 +82,16 @@ import LinkComponent from "./LinkComponent.vue";
   mask-image: url(../assets/img/mask-image.svg);
   mask-position: center;
   mask-repeat: no-repeat;
-  mask-size: contain;
-  width: 793px;
+  mask-size: cover;
+  width: 100%;
+
+  @media (max-width: 980px) {
+    width: 40%;
+  }
+
+  @media (max-width: 760px) {
+    width: 100%;
+  }
 }
 
 .hero-content {
@@ -78,5 +105,12 @@ import LinkComponent from "./LinkComponent.vue";
   display: flex;
   gap: var(--space-xl);
   margin: 0 auto;
+
+  @media (max-width: 760px) {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
 }
 </style>
