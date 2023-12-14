@@ -13,9 +13,9 @@ import NumbersComponent from "@/components/NumbersComponent.vue";
 
     <SmallMap
       title="Sauras-tu relever nos défis ?"
-      text="Nous t'avons préparé une liste de défis pour vaincre ton addiction ou pour continuer tes efforts vers la réussite. À toi de jouer !    "
-      img-desktop="src/assets/img/smallMap.svg"
-      img-mobile="src/assets/img/smallMapMobile.svg"
+      text="Nous t'avons préparé une liste de défis pour vaincre ton addiction ou pour continuer tes efforts vers la réussite. À toi de jouer !"
+      imgDesktop="smallMap.svg"
+      imgMobile="smallMapMobile.svg"
     />
   </main>
 </template>

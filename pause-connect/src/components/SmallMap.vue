@@ -15,6 +15,10 @@ const mapSection = defineProps({
     type: String,
   },
 });
+
+const getImageUrl = (image) => {
+  return new URL(`../assets/img/${image}`, import.meta.url).href;
+};
 </script>
 <template>
   <section class="container">
@@ -22,10 +26,10 @@ const mapSection = defineProps({
     <p>{{ text }}</p>
     <div id="map-content">
       <div class="map-image">
-        <img class="map-image_mask" :src="imgDesktop" />
+        <img class="map-image_mask" :src="getImageUrl(imgDesktop)" />
       </div>
       <!-- <img :src="imgDesktop" alt="title" /> -->
-      <img :src="imgMobile" alt="title" />
+      <img :src="getImageUrl(imgMobile)" alt="title" />
       <LinkComponent title="Relever les défis" color="primary" route-link="/nos-defis" />
     </div>
   </section>
