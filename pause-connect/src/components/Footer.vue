@@ -35,12 +35,6 @@ import LinkComponent from "@/components/LinkComponent.vue";
           </li>
         </div>
       </ul>
-      <ul>
-        <span>Vous souhaitez en parler dans votre établissement ?</span>
-        <li>
-          <LinkComponent color="secondary" title="Contactez nous" route-link="#"></LinkComponent>
-        </li>
-      </ul>
     </div>
     <div id="footer-legal-links">
       <a href="">Politique de confidentialité</a>

@@ -26,11 +26,6 @@ var menu = [
   {
     name: "Sortir de l'addiction",
     link: "/aide",
-    color: "white",
-  },
-  {
-    name: "Contact",
-    link: "/contact",
     color: "citrus",
   },
 ];
