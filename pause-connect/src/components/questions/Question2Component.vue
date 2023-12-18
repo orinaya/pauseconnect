@@ -77,7 +77,8 @@ label {
     min-width: 370px;
     margin: auto;
     @media (max-width: 760px) {
-        min-width: none;
+        min-width: auto;
+        margin: inherit;
     }
 }
 .devices img {
@@ -92,7 +93,7 @@ label {
     left: calc(50% - (126px / 2));
     top: 20svh;
     @media (max-width: 760px) {
-        top: 15svh;
+        top: 18svh;
     }
 }
 
@@ -101,7 +102,7 @@ label {
     left: calc(59%);
     top: 10.5svh;
     @media (max-width: 760px) {
-        top: 5.5svh;
+        top: 8.5svh;
     }
 }
 
@@ -110,7 +111,7 @@ label {
     left: calc(-5.5%);
     top: 7svh;
     @media (max-width: 760px) {
-        top: 1svh;
+        top: 4svh;
     }
 }
 
@@ -119,7 +120,7 @@ label {
     left: calc(71%);
     top: 24svh;
     @media (max-width: 760px) {
-        top: 20svh;
+        top: 23svh;
     }
 }
 
@@ -128,7 +129,7 @@ label {
     left: calc(17%);
     top: 27svh;
     @media (max-width: 760px) {
-        top: 22svh;
+        top: 25svh;
     }
 }
 
