@@ -135,6 +135,12 @@ nav {
         color: var(--citrus-500);
     }
 }
+
+.nav-content_link:hover::after,
+.nav-content_link:focus {
+    transform: scaleX(1);
+}
+
 .citrus {
     color: var(--citrus-500);
 }
